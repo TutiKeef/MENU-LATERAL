@@ -26,7 +26,7 @@ nav.menu-lateral {
 
 /* Classe ativada dinamicamente para expandir o menu */
 nav.menu-lateral.expandir {
-    width: 300px;
+    width: 350px;
 }
 
 /* Botão para expandir o menu */
