@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <nav class="menu-lateral">
+        <!-- Botão de expandir -->
+        <div class="btn-expandir" id="btn-exp">
+            <i class="bi bi-list-nested"></i>
+        </div>
+
+        <!-- Itens do menu -->
+        <ul>
+            <li class="item-menu ativo">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-cart-dash"></i></span>
+                    <span class="txt-link">Carrinho de compras</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-people"></i></span>
+                    <span class="txt-link">Amigos</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-person-add"></i></span>
+                    <span class="txt-link">Adicionar Amigos</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-bookmarks"></i></span>
+                    <span class="txt-link">Seus Favoritos</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-person-badge"></i></span>
+                    <span class="txt-link">Meu Perfil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript para funcionalidade do menu -->
+    <script>
+        // Selecionar todos os itens do menu
+        const menuitem = document.querySelectorAll('.item-menu');
+
+        function selectLink() {
+            menuitem.forEach((item) => item.classList.remove('ativo'));
+            this.classList.add('ativo');
+        }
+
+        menuitem.forEach((item) => {
+            item.addEventListener('click', selectLink);
+        });
+
+        // Expandir ou recolher o menu
+        const btnExp = document.querySelector('#btn-exp');
+        const menuSide = document.querySelector('.menu-lateral');
+
+        btnExp.addEventListener('click', function () {
+            menuSide.classList.toggle('expandir');
+        });
+    </script>
+
+</body>
+</html>

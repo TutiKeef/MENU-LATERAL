@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    height: 900vh;
+}
+
+/* MENU LATERAL */
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: rgb(78, 78, 78);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #491c68;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* Classe ativada dinamicamente para expandir o menu */
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+/* Botão para expandir o menu */
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i {
+    color: azure;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Lista de navegação */
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+/* Estilo dos itens do menu */
+ul li.item-menu {
+    transition: 0.5s;
+}
+
+/* Item ativo (selecionado) */
+ul li.ativo {
+    background-color: #491c68;
+}
+
+/* Hover nos itens */
+ul li.item-menu:hover {
+    background: #491c68;
+}
+
+/* Links do menu */
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    line-height: 45px;
+}
+
+/* Ícone do item do menu */
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+/* Texto do link (oculto no modo fechado) */
+ul li.item-menu a .txt-link {
+    margin-left: 40px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* Exibe o texto ao expandir o menu */
+nav.menu-lateral.expandir .txt-link {
+    opacity: 1;
+}
